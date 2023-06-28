@@ -1,0 +1,237 @@
+
+create table productoCaf(     /*Creamos la TABLA 1 de los productos de la cafeteria del tecnologico*/
+id_p number(10) constraint pk_id_p PRIMARY KEY,
+nombre_p char(50) not null,
+precio_p number(3) not null,
+num_tipo number(10) not null,
+num_mar number(10) not null
+);
+
+drop table productoCaf;       /*Sentencia para eliminar la tabla*/
+select * from productoCaf;   /*Visualizamos la tabla creacda y los datos contenidos*/
+truncate table productoCaf;  /*Vaciamos el contenido de toda la tabla*/
+
+insert into productoCaf values (1,'Chetos bolita',15,3,2);          /*Insertamos datos recabados*/
+insert into productoCaf values (2,'Takis amarillos',20,3,2);
+insert into productoCaf values (3,'Sabritas naturales',18,3,2);
+insert into productoCaf values (4,'Doritos pizzerola',20,3,2);
+insert into productoCaf values (5,'Doritos flamit hot',18,3,2);
+insert into productoCaf values (6,'Galletas chokis',20,5,5);
+insert into productoCaf values (7,'Cacahuates',15,4,4);
+insert into productoCaf values (8,'Rancheritos',17,3,2);
+insert into productoCaf values (9,'Crossantines choco',15,2,1);
+insert into productoCaf values (10,'Runners',18,3,4);
+insert into productoCaf values (11,'Emperador de limon',20,5,5);
+insert into productoCaf values (12,'Panque napolitano',22,2,5);
+insert into productoCaf values (13,'Chetos torciditos',17,3,2);
+insert into productoCaf values (14,'Chetos colmillos',18,3,2);
+insert into productoCaf values (15,'Panque de pasas',35,2,1);
+insert into productoCaf values (16,'Paketaxo flamit hot',25,3,2);
+insert into productoCaf values (17,'Nito',15,2,1); 
+insert into productoCaf values (18,'Del valle frut',15,1,3);
+insert into productoCaf values (19,'Coca cola',16,1,3);
+insert into productoCaf values (20,'Pinguinos',20,2,5);
+insert into productoCaf values (21,'Galletas principe',20,5,5);
+insert into productoCaf values (22,'Mini rocko',5,5,5);
+insert into productoCaf values (23,'Gansito',17,2,5);
+insert into productoCaf values (24,'Sabritas abobadas',18,3,2);
+insert into productoCaf values (25,'Bimbuñuelos',20,2,1);
+insert into productoCaf values (26,'Emperador de chocolate',20,5,5);
+insert into productoCaf values (27,'Takis fuego',18,3,2);
+insert into productoCaf values (28,'Donas azucaradas',18,2,1);
+insert into productoCaf values (29,'Doritos diablo',18,3,2);
+insert into productoCaf values (30,'Chips fuego',15,3,4);
+insert into productoCaf values (31,'Barritas fresa',15,5,5);
+insert into productoCaf values (32,'Toreadas',20,3,4);
+insert into productoCaf values (33,'Sidral',17,1,3);
+insert into productoCaf values (34,'Takis guacamole',20,3,2);
+insert into productoCaf values (35,'Doritos incognita',18,3,2);
+insert into productoCaf values (36,'Galletas polvorones',20,5,5);
+insert into productoCaf values (37,'Chips jalapeño',20,3,4);
+insert into productoCaf values (38,'Hot nuts',20,4,4);
+insert into productoCaf values (39,'Panque de nuez',38,2,1);
+insert into productoCaf values (40,'Chipotles',20,3,4);
+insert into productoCaf values (41,'Chocorroles',22,2,5);
+insert into productoCaf values (42,'Big mix',25,3,4);
+insert into productoCaf values (43,'Barritas de piña',15,5,5);
+insert into productoCaf values (44,'Rufles original',18,3,2);
+insert into productoCaf values (45,'Crujitos',18,3,2);
+insert into productoCaf values (46,'Donas espolvoreadas',21,2,1);
+insert into productoCaf values (47,'Churrumais',15,3,2);
+insert into productoCaf values (48,'Sabritas receta crujiente',18,3,2);
+insert into productoCaf values (49,'Mantecadas',25,2,1);
+insert into productoCaf values (50,'Coca cola rosalia',20,1,3);
+insert into productoCaf values (51,'Fuzetea',18,1,3);
+insert into productoCaf values (52,'Rufles de queso',18,3,2);
+insert into productoCaf values (53,'Cacahuate mafer',23,4,2);
+insert into productoCaf values (54,'Golden nuts',20,4,4);
+insert into productoCaf values (55,'Rebanadas',12,5,1);
+insert into productoCaf values (56,'Chips naturales',20,3,4);
+insert into productoCaf values (57,'Galletas sponch',22,5,5);
+insert into productoCaf values (58,'Wapas',20,3,4);
+insert into productoCaf values (59,'Galletas canelitas',20,5,5);
+insert into productoCaf values (60,'Coca cola de cereza',20,1,3);
+insert into productoCaf values (61,'Roles de canela',24,2,1);
+insert into productoCaf values (62,'Papatinas fuego',15,3,4);
+insert into productoCaf values (63,'Paketaxo queso',25,3,2);
+insert into productoCaf values (64,'Dalmata',12,2,5);
+insert into productoCaf values (65,'Pop',20,3,4);
+insert into productoCaf values (66,'Fritos chipotle',17,3,2);
+insert into productoCaf values (67,'Papatinas jalapño',15,3,4);
+insert into productoCaf values (68,'Agua purificada',15,1,3);
+insert into productoCaf values (69,'Doritos nachos',20,3,2);
+insert into productoCaf values (70,'Galletas triki trakes',20,5,5);
+insert into productoCaf values (71,'Fanta',15,1,3);
+insert into productoCaf values (72,'Chetos flamit hot',15,3,2);
+insert into productoCaf values (73,'Sprite',15,1,3);
+insert into productoCaf values (74,'Roles con glaseado',26,2,1);
+insert into productoCaf values (75,'Emperador de avellana',20,5,5);
+
+
+-----------------------------------------------------------------------------------------
+
+
+create table tipoProd(        /*Creamos la TABLA 2 de los tipos de productos*/
+id_t number(10) constraint pk_id_t PRIMARY KEY,
+tipo_p char(50) not null
+);
+
+drop table tipoProd;      /*Sentencia para eliminar la tabla*/
+select * from tipoProd;     /*Visualizamos la tabla creacda y los datos contenidos*/
+truncate table tipoProd;
+
+insert into tipoProd values(76,'Algodon');
+insert into tipoProd values(77,'Ceramica');
+insert into tipoProd values(78,'Cemento');
+insert into tipoProd values(79,'Yeso');
+insert into tipoProd values(80,'Alcohol');
+
+create sequence sec_incrementoIdTipoo        /*Creacion de secuencia con buenas practicas*/
+start with 1
+increment by 1
+maxvalue 100
+minvalue 1;
+
+drop sequence sec_incrementoIdTipoo;     /*Sentencia para eliminar una secuencia*/
+
+
+
+----------------------------------------------------------------------------
+
+create table marcaProd(    /*Creamos la TABLA 3 de las marcas de los productos*/
+id_m number(10) constraint pk_id_m PRIMARY KEY,
+marca_p char(50) not null
+);
+
+drop table marcaProd;      /*Sentencia para eliminar la tabla*/
+select * from marcaProd;    /*Visualizamos la tabla creacda y los datos contenidos*/
+truncate table marcarProd;
+
+insert into marcaProd values(81,'Blanca Nieves');
+insert into marcaProd values(82,'Cristal');
+insert into marcaProd values(83,'La moderna');
+insert into marcaProd values(84,'Ace');
+insert into marcaProd values(85,'123');
+
+
+create sequence sec_incrementoIdMarca     /*Creacion de secuencia con buenas practicas*/
+start with 1
+increment by 1
+maxvalue 100
+minvalue 1;
+
+drop sequence sec_incrementoIdMarca;     /*Sentencia para eliminar una secuencia*/
+
+-------------------------------------------------------------------------------------
+
+create or replace trigger tr_llenarTipo        /*Creacion de trigger con buenas practicas*/
+before insert
+on productoCaf
+for each row
+begin
+if: new.num_tipo = 1 then
+    insert into tipoProd values(sec_incrementoIdTipoo.nextval,'Bebidas');
+    end if;
+if: new.num_tipo = 2 then
+    insert into tipoProd values(sec_incrementoIdTipoo.nextval,'Panes');
+    end if;
+if: new.num_tipo = 3 then
+    insert into tipoProd values(sec_incrementoIdTipoo.nextval,'Frituras');
+    end if;
+if: new.num_tipo = 4 then
+    insert into tipoProd values(sec_incrementoIdTipoo.nextval,'Cacachuates');
+    end if;
+if: new.num_tipo = 5 then
+    insert into tipoProd values(sec_incrementoIdTipoo.nextval,'Galletas');
+    end if;
+    end;
+    
+    
+-----------------------------------------------------------------------------------
+
+create or replace trigger tr_llenarMarca    /*Creacion de trigger con buenas practicas*/
+before insert
+on productoCaf
+for each row
+begin
+if: new.num_mar = 1 then
+    insert into marcaProd values(sec_incrementoIdMarca.nextval,'Bimbo');
+    end if;
+if: new.num_mar = 2 then
+    insert into marcaProd values(sec_incrementoIdMarca.nextval,'Sabritas');
+    end if;
+if: new.num_mar = 3 then
+    insert into marcaProd values(sec_incrementoIdMarca.nextval,'Coca-cola');
+    end if;
+if: new.num_mar = 4 then
+    insert into marcaProd values(sec_incrementoIdMarca.nextval,'Barcel');
+    end if;
+if: new.num_mar = 5 then
+    insert into marcaProd values(sec_incrementoIdMarca.nextval,'Marinela');
+    end if;
+    end;
+    
+    
+---------------------------------------------------------------------------------------------------------------------------------------------
+                                                                    /* JOINS */
+
+select productoCaf.nombre_p, productoCaf.precio_p, tipoProd.tipo_p, marcaProd.marca_p from tipoProd full join marcaProd on tipoProd.id_t=marcaProd.id_m full join productoCaf on productoCaf.id_p=marcaProd.id_m;
+
+select productoCaf.nombre_p, marcaProd.marca_p from productoCaf inner join marcaProd on productoCaf.id_p=marcaProd.id_m where marcaProd.marca_p='Barcel';
+
+select * from productoCaf left join tipoProd on productoCaf.id_p=tipoProd.id_t where tipoProd.id_t is null;
+
+select * from productoCaf right join marcaProd on productoCaf.id_p=marcaProd.id_m where productoCaf.id_p is not null;
+
+select * from productoCaf full join tipoProd on productoCaf.id_p=tipoProd.id_t full join marcaProd on productoCaf.id_p=marcaProd.id_m where productoCaf.id_p is null or tipoProd.id_t is null;
+
+select * from productoCaf inner join tipoProd on productoCaf.id_p=tipoProd.id_t inner join marcaProd on productoCaf.id_p=marcaProd.id_m where productoCaf.nombre_p like 't%' or productoCaf.nombre_p like 'T%';
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+                                            /* YABLA EXTRA */
+create table extra(         
+texto char(200)
+);
+
+select * from extra;
+drop table extra;
+
+create or replace trigger tr_mensaje
+before insert 
+on productoCaf
+for each row when(new.nombre_p like 'T%')
+begin
+    insert into extra values('Se inserto un producto con la vitamina T con el nombre de ' || :new.nombre_p);
+    end tr_mensaje;
+    
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                /* CREAR VISTA */
+                                                
+create view vw_datosProd as         /*Creacion de vista con buenas practicas*/
+select productoCaf.nombre_p as PRODUCTO,marcaProd.marca_p AS MARCA
+from productoCaf 
+inner join marcaProd
+on productoCaf.id_p=marcaProd.id_m;
+
+select * from vw_datosProd;                             
+drop view vw_datosProd;         /*Sentencia para eliminar una vista*/                                                
